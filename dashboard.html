@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://use.typekit.net/yju4zwz.css">
+
+    <title>Dashboard</title>
+  </head>
+  
+  <body>
+  <div id="borge">
+  <header>
+    <a id="logo" href="dashboard.html"><img src="images/logo.svg" alt="ReDo logo"></a>
+    <a class="header-ikona" href="bruger.html"><img id="bruger" src="images/bruger-ikon.svg" alt="ikon af bruger">
+    NAVN</a>
+ </header>
+ 
+ <!-- Navigationsbar -->
+ <nav class="icon-bar">
+   
+    <a href="dashboard.html"><img src="images/dashboard-ikon-aktiv.svg" alt="ikon af et hus">DASHBOARD</a>
+    
+  <a href="opgaver.html"><img src="images/opgaver-ikon.svg" alt="ikon af et opgaveark">OPGAVER</a> 
+  
+  <a href="praemier.html"><img src="images/praemier-ikon.svg" alt="ikon af en porkal">PRÆMIER</a> 
+  
+  <a href="praestation.html"><img src="images/fremgang-ikon.svg" alt="ikon af fremgangs-pil">PRÆSTATION</a>
+  
+  <a href="scanner.html"><img src="images/qr-ikon.svg" alt="ikon af en qr-scanner">SCANNER</a> 
+</nav>
+ 
+ <main>
+     <article class="bokse">
+        <a href="opgaver.html">
+         <div>
+         <img src="images/opgaver-ikon.svg" class="dash-ikon" alt="ikon af opgaveark">
+         <h2>OPGAVER</h2>
+         </div>
+         <span>DATO: 11.01.2020 til 18.01.2020</span>
+         <img id="spand" src="images/skraldespand.svg" alt="ikon af en skraldespand">
+         
+         <div id="knapper">
+             <button id="knap1">
+                 Let
+             </button>
+             <button id="knap2">
+                 Middel
+             </button>
+             <button id="knap3">
+                 Svær
+             </button>
+         </div>
+         <img id="progres" src="images/skraldecomp.gif" alt="progressionsbar over hvor langt man er med opgaven">
+         </a>
+     </article>
+     
+     <article class="bokse" id="boks2">
+        <a href="praemier.html">
+        <div>
+        <img src="images/praemier-ikon.svg" alt="ikon af pokal" class="dash-ikon">
+         <h2>PRÆMIER</h2>
+         </div>
+         <img class="logoer" src="images/logo-helsam.png" alt="Helsams logo">
+         <img class="logoer" src="images/logo-bilka.png" alt="Bilkas logo" id="bilka">
+         <img class="logoer" src="images/logo-rema.png" alt="Rema 1000s logo">
+         <img class="logoer" src="images/logo-grums.png" alt="Grums Århus' logo">
+         </a>
+     </article>
+     
+     <article class="bokse" id="boks3">
+       <a href="praestation.html">
+       <div>
+       <img src="images/fremgang-ikon.svg" alt="ikon af fremgangspil" class="dash-ikon">
+        <h2>PRÆSTATION</h2>
+        </div>
+        <p>Du har sparet miljøet for følgende x kg. CO2:</p>
+        <section>
+            <div class="prastation">
+                <img src="images/koedfri.svg" alt="ikon af en plante">
+                <p>0,8 kg.</p>
+            </div>
+            <div class="prastation">
+                <img src="images/transport.svg" alt="ikon af en bus">
+                <p>1,1 kg.</p>
+            </div>
+            <div class="prastation">
+                <img src="images/saml-skrald.svg" alt="ikon af skraldespand">
+                <p>0,6 kg.</p>
+            </div>
+            <div class="prastation">
+                <img src="images/cykel.svg" alt="ikon af en cykel">
+                <p>1,4 kg.</p>
+            </div>
+        </section> 
+        </a>
+     </article>
+ </main>
+  
+  </div>
+  </body>
+</html>

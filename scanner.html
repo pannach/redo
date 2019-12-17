@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ZXing for JS">
+
+    <title></title>
+
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <link rel="stylesheet" href="https://use.typekit.net/yju4zwz.css">
+    
+    
+    
+</head>
+
+<body>
+    
+    
+    <header>
+    <a id="logo" href="dashboard.html"><img src="images/logo.svg" alt="ReDo logo"></a>
+    <a class="header-ikona" href="#"><img id="bruger" src="images/bruger-ikon.svg" alt="ikon af bruger">
+    NAVN</a>
+ </header>
+    
+     <!-- Navigationsbar -->
+ <div class="icon-bar">
+    <a href="dashboard.html"><img src="images/dashboard-ikon.svg" alt="ikon af et hus">DASHBOARD</a>
+  <a href="opgaver.html"><img src="images/opgaver-ikon.svg" alt="ikon af et opgaveark">OPGAVER</a> 
+  <a href="praemier.html"><img src="images/praemier-ikon.svg" alt="ikon af en porkal">PRÆMIER</a> 
+  <a href="praestation.html"><img src="images/fremgang-ikon.svg" alt="ikon af fremgangs-pil">PRÆSTATION</a>
+  <a href="scanner.html"><img src="images/qr-ikon-aktiv.svg" alt="ikon af en qr-scanner">SCANNER</a> 
+</div>
+
+    <main>
+
+        <section>
+            <h1>SCANNER</h1>
+
+           <a id="startButton" class="log-ind">START SCAN</a>
+           
+            <div id="lasere">
+      <canvas id="qr-canvas"></canvas>       
+      <div class="scanner-laser laser-rightBottom"></div>
+      <div class="scanner-laser laser-rightTop"></div>
+                <div class="scanner-laser laser-leftBottom"></div>
+      <div class="scanner-laser laser-leftTop">
+           <div>
+                
+                
+            </div>
+      </div>
+      
+       
+
+            <div id="video-container" class="scanner-laser">
+                <video id="video"></video>
+            </div>
+      
+    </div>    
+           
+          
+        </section>
+        
+        
+        <section id="scan-knapper">
+           
+        <div>
+            <img src="images/settings.svg" alt="indstillinger ikon" class="scan-knapperne">
+          
+        </div>
+            
+            <div><img src="images/qr-knap.svg" alt="qr-kode" class="scan-knapperne" id="tag-scan"></div>
+        
+            
+            <div><img src="images/redo-pil.svg" alt="fortrydelses pil" class="scan-knapperne"></div>
+            
+        </section>
+    </main>
+<script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            let selectedDeviceId;
+            const codeReader = new ZXing.BrowserQRCodeReader()
+            console.log('ZXing code reader initialized')
+            codeReader.getVideoInputDevices()
+                .then((videoInputDevices) => {
+                    let videoIndex = 0;
+
+
+
+                    if (videoInputDevices.length >= 1) {
+                        videoInputDevices.forEach((element) => {
+                            console.log(element);
+                        })
+                        const sourceSelect = document.getElementById('sourceSelect')
+
+                        // videoIndex = 1
+                        console.log(videoInputDevices.length);
+                        let length = videoInputDevices.length - 1;
+
+                        if (videoInputDevices[length].deviceId) {
+                            selectedDeviceId = videoInputDevices[length].deviceId;
+                            document.getElementById('startButton').addEventListener('click', () => {
+                                codeReader.decodeFromInputVideoDevice(selectedDeviceId, 'video').then((result) => {
+                                    console.log(result)
+                                    document.getElementById('result').textContent = result.text
+                             
+                                  var sound = new Howl({
+  src: ['https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/jg-032316-sfx-elearning-correct-answer-sound-1.mp3']
+});
+
+sound.play();
+                                }).catch((err) => {
+                                    console.error(err)
+                                    document.getElementById('result').textContent = err
+                                })
+
+                                console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+                            })
+                        } else {
+                            document.getElementById('startButton').addEventListener('click', () => {
+                                codeReader.decodeFromInputVideoDevice(undefined, 'video').then((result) => {
+                                    console.log(result)
+                                    document.getElementById('result').textContent = result.text
+                                                                     var sound = new Howl({
+  src: ['https://d1490khl9dq1ow.cloudfront.net/sfx/mp3preview/jg-032316-sfx-elearning-correct-answer-sound-1.mp3']
+});
+
+sound.play();
+                                }).catch((err) => {
+                                    console.error(err)
+                                    document.getElementById('result').textContent = err
+                                })
+
+                                console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+                            })
+                        }
+                        console.log(length);
+                        console.log(selectedDeviceId);
+                    }
+
+                    document.getElementById('resetButton').addEventListener('click', () => {
+                        codeReader.reset()
+                        console.log('Reset.')
+                    })
+                })
+                .catch((err) => {
+                    console.error(err)
+                })
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,986 @@
+      *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+    h1{
+        font-family: 'gooddog-new', sans-serif;
+        color: #543f2d;
+        font-size: 26px;
+        text-align: center;
+        margin-top: 5%;
+    }    
+    
+    h2{
+        font-family: 'omnes-pro', sans-serif;
+        color: #543f2d;
+        font-size: 18px;
+    }
+    
+    p{
+        font-family: 'quicksand', sans-serif;
+        color: #543f2d;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+/* FONTS
+
+Brødtekst: font-family: quicksand, sans-serif;
+
+font-weight: 400; (regular) - 500 ved medium - 700 ved bold
+
+font-style: normal;
+
+Overskrift: font-family: gooddog-new, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+Underoverskrift: font-family: omnes-pro, sans-serif;
+
+font-weight: 500;
+
+font-style: normal;
+
+
+FARVER:
+    GUL: #f6e746
+    Lyserød: #e0a888
+    Lysegrønne: #c2d32c
+    Mørkegrøn: #36623d
+    Lysebrun: #9f8b77
+    Mørkebrun: #543f2d
+NAV: #f6f6ee
+*/
+
+/* INTROSIDEN */
+    
+    .intro-baggrund{
+        background-image: url(../images/baggrund-opacity.svg);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #f7f7f0;
+    }
+    
+    .intro-logo{
+        width: 23%;
+        margin-left: 2%;
+    }
+    
+    #velkomst{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        margin-top: 10%;
+        
+    
+    }
+    
+    #velkomst h1{
+        font-size: 40px;
+    }
+    
+    #intro{
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 4%;
+    }
+    
+    
+    
+.mySlides {display: none}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  margin: 0 auto;
+     position: relative;
+        top: 40px;
+   
+}
+    
+
+    .slider-images{
+height: 455px;
+        width: auto;
+        padding-left: 4%;
+    }
+    
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #543f2d;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+    .prev{
+        left: 0;
+    }
+
+    #dots{
+        text-align: center;
+        margin-top: 4%;
+    }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #efeddf;
+    border: 1px solid #9F8B77;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.active, .dot:hover {
+  background-color: #9F8B77;
+}
+  
+    #skip{
+        color: #543F2D;
+        font-family: 'omnes-pro', sans-serif;
+        top: 40px;
+        position: relative;
+     text-align: center;
+        cursor: pointer;
+      
+    }
+    
+    #skip a{
+        color: #543f2d;
+    }
+    
+    
+/* LANDINGPAGE */
+    
+    #landings-logo{
+        width: 60%;
+    }   
+    
+    .intro-baggrund div{
+        text-align: center;
+        margin-top: 8%;
+    }
+    
+    .intro-baggrund div h2{
+        font-size: 13px;
+    }
+    
+
+    
+    
+    /* LOGIN */
+    
+    
+    form{
+  overflow:hidden;
+}
+form{
+    
+  animation: 3s slide-up;
+  margin-top:0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+#form-container{
+    padding: 0;
+    margin-top: 8%;
+}
+
+#landings-overskrift{
+    margin-top: 15%;
+}
+
+
+    
+    
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #CBC8BE;
+    background-color: rgba(229, 227, 205, 0.3);
+    font-family: 'omnes-pro', sans-serif;
+    border-radius: 10% 10% 2% 20%;
+    box-shadow: rgba(0, 0, 0, 0.161);
+ 
+}
+
+
+   
+
+/* Set a style for all buttons */
+.log-ind {
+  background-color: #C2D32C;
+  color: rgba(64, 101, 70, 0.45);
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+    border: 3px solid rgba(54, 98, 61, 0.35);
+    margin-top: 10%;
+    font-family: 'omnes-pro', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+  border-radius: 5% 10% 5% 15%;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.161);
+    font-size: 18px;
+    
+}
+    
+    
+
+    #ny-bruger{
+        text-align: center;
+        margin-top: 15%;
+        color: #9F8B77;
+    }
+    
+    #ny-bruger a{
+        color: #9F8B77;
+    }
+
+
+
+
+/* The "Forgot password" text */
+.psw {
+  float: right;
+    margin-right: 10%;
+    margin-top: 3%;
+  font-family: 'quicksand', sans-serif;
+  font-size: 12px;
+    color: #9f6b77;
+    
+}
+
+    
+    
+    #eller{
+        color: #543f2d;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 8%;
+        
+    }
+    
+    #facebook{
+        background-color: rgba(59, 89, 152, 0.75);
+  color: rgba(221, 221, 221, 0.45);
+  padding: 14px 20px;
+  cursor: pointer;
+  width: 80%;
+    border: 3px solid #3b5998;
+    margin-top: 10%;
+    font-family: 'omnes-pro', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8%;
+  border-radius: 5% 10% 5% 15%;
+    font-weight: 900;
+        box-shadow: rgba(0, 0, 0, 0.161);
+        font-size: 18px;
+    }
+
+/*Navigationsbar*/
+.icon-bar {
+  width: 375px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  background-color: #f6f6ee;
+  overflow: auto;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px -2px 4px #dadada;
+      border-top-left-radius: 7%;
+    border-top-right-radius: 15%;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-family: 'omnes-pro', sans-serif;
+        color: #543f2d;
+  font-size: 11px;
+    text-decoration: none;
+}
+
+.icon-bar a:active{
+    color: pink;
+}
+    .icon-bar img{
+        width: 45%;
+    }
+    
+ 
+/*DASHBOARD*/
+body{
+    background-color: #fbfbf6;
+}
+    
+    header{
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+    }
+    
+    .header-ikona{
+        font-size: 12px;
+        color: #543f2d;
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'omnes-pro', sans-serif;
+    }
+    
+    #bruger{
+      margin-bottom: -6%;
+    }
+    
+     #logo{
+        width: 15%;
+    }
+
+#borge{
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.bokse{
+    background-color: #EFEDDF;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3%;
+    border-radius: 15% 12% 8% 15%;
+    padding: 5% 6% 5% 6%;
+}
+
+.bokse h2{
+    font-size: 20px;
+}
+
+.bokse a{
+    text-decoration: none;
+}
+
+.dash-ikon{
+    width: 9%;
+    float: left;
+    margin-right: 2%;
+}
+
+span{
+    font-family: 'omnes-pro', sans-serif;
+    color: #543f2d;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#spand{
+    width: 15%;
+    float: right;
+    margin-top: -8%;
+}
+
+#knap1, #knap2, #knap3{
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    width: 30%;
+    padding: 1.5% 0 1.5% 0;
+    border-radius: 20%;
+    margin-top: 8%;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#knap1{
+    background-color: #C2D32C;
+    color: #687309;
+}
+
+#knap2{
+    background-color: #F6E746;
+    color: #A99C10;
+}
+
+#knap3{
+    background-color: #E0A888;
+    color: #9E6442;
+}
+
+#knapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#progres{
+    width: 100%;
+}
+
+#boks2, #boks3{
+    margin-top: 7%;
+}
+
+.logoer{
+    width: 45%;
+    margin-top: 7%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.bokse p{
+    font-size: 14px;
+}
+
+.prastation{
+    width: 23%;
+    margin: 7% 2% 2% 2%;
+}
+
+.prastation img{
+    padding-bottom: 10%;
+}
+
+.prastation p{
+    text-align: center;
+    font-family: 'gooddog-new', sans-serif;
+}
+
+#boks3 section{
+    display: flex;
+}
+
+/*PRÆSTATION*/
+#prae h1{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#prae p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#infograf{
+    width: 100%;
+    margin-top: 5%;
+}
+
+#prae-ikoner{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#prae-ikoner p{
+    font-size: 14px;
+    padding-top: 10%;
+    line-height: 120%;
+    font-family: 'quicksand', sans-serif;
+}
+
+/* OPGAVER SIDEN  */
+    
+    .standard-baggrund{
+        background-color: #FBFBF6;
+    }
+    
+    .standard-baggrund h1{
+        text-align: center;
+        margin-top: 4%;
+    }
+    
+    #opgave-boks{
+        background-color: #EFEDDF;
+        width: 85%;
+        margin: 0 auto;
+        padding: 6%;
+        margin-top: 5%;
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15% 12% 12% 10%;   
+    }
+    
+    
+    #opgave-boks p{
+        color: #9F8B77;
+        font-weight: 700;
+        margin-top: 4%;
+        margin-bottom: 2%;
+        
+    }
+    
+    #opgave-boks a{
+        font-family: 'quicksand', sans-serif;
+        color: #9f8b77;
+        
+    }
+    
+    #scan-knap{
+        margin-top: 10%;
+        text-align: center;
+    }
+    
+    #step-by-step {
+        margin: 10%;
+        margin-bottom: 40%;
+    }
+    
+    #step-by-step h2{
+        margin-bottom: 4%;
+    }
+    
+    #step-by-step p{
+        color: #9F8B77;
+    }
+    
+    .steps{
+        width: 40%;
+     
+    }
+    
+    .venstre-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 140%;
+        margin-bottom: 4%;
+    }
+    
+    .hoejre-flex{
+       display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        line-height: 140%;
+        margin-bottom: 4%; 
+    }
+    
+    #praemie-knap{
+        margin-top: -5%;
+        text-align: center;
+    }
+
+#progres-opgave{
+    width: 85%;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+/*BRUGER SIDE*/
+
+#brugerikon {
+    width: 47%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+#pernille {
+    margin-top: 3%;
+}
+
+#mail {
+    margin-left: 25%;
+    margin-top: 3%;
+}
+
+#gmail {
+    margin-left: 41%;
+    margin-top: -6.5%;
+}
+
+#kode {
+    margin-left: 25%;
+}
+
+#rour {
+    margin-left: 41%;
+    margin-top: -6.5%;
+}
+
+#blyanten {
+    width: 4.5%;
+    position: absolute;
+    margin-left: 80%;
+    margin-top: -11.5%;
+}
+
+#blyantto {
+    width: 4.5%;
+    position: absolute;
+    margin-left: 80%;
+    margin-top: -5%;
+}
+
+#box {
+    background-color: #efeddf;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10%;
+    border-radius: 15% 12% 8% 15%;
+    padding: 7%;
+    font-family: 'quicksand', sans-serif;
+    font-size: 15px;
+    color: #543f2d;
+
+}
+
+.container {
+    position: relative;
+    padding-left: 12%;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #DEDBC7;
+    border-radius: 20%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: C2D22E;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #DEDBC7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 6px;
+    top: -5px;
+    width: 10px;
+    height: 15px;
+    border: solid #C2D22E;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 20%;
+}
+
+/* i Popup container */
+.popup {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    left: 81.6%;
+    right: 12%;
+    top: 49.26%;
+    bottom: 47.78%;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #E0A888;
+    color: #543F2D;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    display: none;
+    
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 80%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #E0A888 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    left: -140%;
+    padding: 43%;
+    display: flex;
+   
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#ikon {
+    background-color: #E0A888;
+    ;
+    width: 25px;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+#ikon p {
+    padding: 7%;
+    color: #7e4524;
+    font-family: 'gooddog-new', sans-serif;
+    font-size: 18px;
+    padding-left: 40%;
+
+}
+
+#myPopup {
+    font-family: 'quicksand', sans-serif;
+    font-size: 15px;
+    color: #7e4524;
+    line-height: inherit;
+}
+
+/*PRÆMIE SIDE*/
+#logo-firkanter{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+#logo-firkanter img{
+    width: 37%;
+}
+
+.hojre-firkant{
+    padding: 0 2.5% 5% 0;
+    margin-left: 13%;
+}
+
+.venstre-firkant{
+   padding: 0 0 5% 2.5%; 
+}
+
+#prae-p{
+    text-align: center;
+    margin-top: 3%;
+}
+
+#praemie-boks{
+    visibility: hidden;
+    margin-top: 8%;
+}
+
+#skraldeknap{
+    width: 80%;
+    margin-left: 12%;
+    padding-top: 5%;
+}
+
+#stregkode{
+    width: 85%;
+    margin-left: 8%;
+    margin-top: 10%;
+}
+
+/* SCANNER */
+    
+#video-container{
+  width: 250px;
+  height: 250px;
+        overflow: hidden;
+        position: absolute;
+        top: 5%;
+        left: 6%;
+}
+#video{
+    width :150px;
+  height :150px;
+  transform:scale(3);
+    
+    
+}
+
+    #lasere{
+        position: relative;
+        display: inline-block;
+    }
+    
+ 
+    #qr-canvas{
+        width: 380px;
+        height: 350px;
+        position: relative;
+    }
+    
+      .scanner-laser{
+            position: absolute;
+            margin: 40px;
+            height: 30px;
+            width: 30px;
+          
+        }
+        .laser-leftTop{
+            top: 0;
+            left: 0;
+            border-top: solid #9F8B77 10px;
+            border-left: solid #9F8B77 10px;
+            border-radius: 15%;
+        }
+        .laser-leftBottom{
+            bottom: 0;
+            left: 0;
+            border-bottom: solid #9F8B77 10px;
+            border-left: solid #9F8B77 10px;
+            border-radius: 15%;
+        }
+        .laser-rightTop{
+            top: 0;
+            right: 0;
+            border-top: solid #9F8B77 10px;
+            border-right: solid #9F8B77 10px;
+            border-radius: 15%;
+        }
+        .laser-rightBottom{
+            bottom: 0;
+            right: 0;
+            border-bottom: solid #9F8B77 10px;
+            border-right: solid #9F8B77 10px;
+            border-radius: 15%;
+        }
+
+    #startButton{ 
+        color: #79934A;
+        width: 50%;
+        margin-top: 7%;
+        text-align: center;  
+    }
+  
+    .scan-knapperne{
+        width: 40%;
+         background-color: #F6F6EE;
+         box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 50%;
+        padding: 6%;
+    }
+    
+    #scan-knapper{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 20%;  
+    }
+    
+    #tag-scan{
+        width: 55%;
+        background-color: #C2D22E;
+        padding: 10%;
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    }

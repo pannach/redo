@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://use.typekit.net/yju4zwz.css">
+
+    <title>Dashboard</title>
+  </head>
+  
+  <body>
+  <div id="borge">
+  <header>
+    <a id="logo" href="dashboard.html"><img src="images/logo.svg" alt="ReDo logo"></a>
+    <a class="header-ikona" href="bruger.html"><img id="bruger" src="images/bruger-ikon.svg" alt="ikon af bruger">
+    NAVN</a>
+ </header>
+ 
+ <!-- Navigationsbar -->
+ <nav class="icon-bar">
+   
+    <a href="dashboard.html"><img src="images/dashboard-ikon.svg" alt="ikon af et hus"><br>DASHBOARD</a>
+    
+  <a href="opgaver.html"><img src="images/opgaver-ikon.svg" alt="ikon af et opgaveark"><br>OPGAVER</a> 
+  
+  <a href="praemier.html"><img src="images/praemier-ikon-aktiv.svg" alt="ikon af en porkal"><br>PRÆMIER</a> 
+  
+  <a href="praestation.html"><img src="images/fremgang-ikon.svg" alt="ikon af fremgangs-pil"><br>PRÆSTATION</a>
+  
+  <a href="scanner.html"><img src="images/qr-ikon.svg" alt="ikon af en qr-scanner"><br>SCANNER</a> 
+</nav>
+ 
+ <main>
+ <h1>PRÆMIER</h1>
+ <p id="prae-p">Tryk på den præmie, du vil vide mere om</p>
+  <div id="logo-firkanter">
+      <img src="images/rema-firkant.svg" alt="rema1000 logo" class="hojre-firkant" id="rema">
+      <img src="images/grums-firkant.svg" alt="Grums Århus logo" class="venstre-firkant" id="grums">
+      <img src="images/helsam-firkant.svg" alt="Helsam logo" class="hojre-firkant" id="helsam">
+      <img src="images/bilka-firkant.svg" alt="Bilka logo" class="venstre-firkant" id="bilka">
+  </div>
+  
+  <section class="bokse" id="praemie-boks">
+      <h2>REMA 1000</h2>
+      <p>Du kan nu spare 15% på økologisk frugt og grønt i Rema 1000. For at indløse præmien skal du trykke på knappen og vise stregkoden i kassen, når du skal betale for dine varer.</p>
+      <a href="praemier1.html"><img src="images/skraldeknap.gif" alt="animation til knap" id="skraldeknap"></a>
+  </section>
+ </main>
+  
+  </div>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+<script>
+$(document).ready(function(){
+  $("#rema").click(function(){
+    $("#grums").css("filter", "blur(3px)");
+      $("#helsam").css("filter", "blur(3px)");
+      $("#bilka").css("filter", "blur(3px)");
+      $("#praemie-boks").fadeIn(1000).css("visibility", "visible");
+  });
+});
+</script>
+  
+  </body>
+</html>
